@@ -1,0 +1,102 @@
+#product-list ul {
+  padding: 0;
+  margin: 20px 0;
+  font-family: Arial, sans serif;
+  color: #555;
+}
+
+#product-list ul > li {
+  list-style: none;
+  border-top: 1px solid #ddd;
+  display: block;
+  padding: 15px;
+  overflow: hidden;
+}
+
+#product-list ul:last-child {
+  border-bottom: 1px solid #ddd;
+}
+
+#product-list ul > li:hover {
+  background: #efefef;
+}
+
+.expand {
+  display: block;
+  text-decoration: none;
+  color: #555;
+  cursor: pointer;
+}
+
+h3 {
+  padding: 0;
+  margin: 0 0 5px 0;
+  font-size: 18px;
+  display: inline-block;
+}
+
+
+
+.detail {
+  margin: 20px 0 0 0;
+  display: none;
+  line-height: 22px;
+}
+
+.right-arrow {
+  width: 10px;
+  height: 10px;
+  float: left;
+  font-weight: bold;
+  font-size: 20px;
+  margin: 25px 15px 0 0;
+}
+
+.icon {
+  height: 50px;
+  width: 50px;
+  float: left;
+  margin: 0 15px 0 0;
+}
+.img_url{
+  display: inline-block;
+  margin-top: 1%;
+}
+.price-container{
+  display: inline-block;
+  transform: translateY(-50%);
+  width: 30%;
+  float: right;
+  margin-top: 5%;
+  margin-right: 5%;
+}
+.large-5{
+display: inline-block;
+align-items: center;
+overflow: auto;
+width: 36%;
+padding-left: 15%;
+}
+
+h1{
+  text-align: center;
+}
+
+#search {
+  position: absolute;
+
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.current-price {
+display: inline-block;
+margin: 0 auto;
+padding-left: 40%;
+}
+
+.reg-price {
+  display: inline-block;
+  float: right;
+  padding-right: 10%;
+}
