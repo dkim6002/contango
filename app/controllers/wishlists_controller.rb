@@ -4,16 +4,19 @@ class WishlistsController < ApplicationController
 
   def index
     @wishlists = Wishlist.all
-    respond_with(@wishlists)
+    @products = Product.all
   end
 
   def show
-    respond_with(@wishlist)
+    
   end
 
   def new
     @wishlist = Wishlist.new
-    respond_with(@wishlist)
+    respond_to do |format|
+      format.html
+      format.json {render json: @wishlist}
+    end
   end
 
   def edit
@@ -22,17 +25,18 @@ class WishlistsController < ApplicationController
   def create
     @wishlist = Wishlist.new(wishlist_params)
     @wishlist.save
-    respond_with(@wishlist)
+    respond_to do |format|
+      format.html
+      format.json {render json: @wishlist}
+    end
   end
 
   def update
     @wishlist.update(wishlist_params)
-    respond_with(@wishlist)
   end
 
   def destroy
     @wishlist.destroy
-    respond_with(@wishlist)
   end
 
   private
@@ -41,6 +45,6 @@ class WishlistsController < ApplicationController
     end
 
     def wishlist_params
-      params[:wishlist]
+      params.require(:wishlist).permit(:user_id, :product_id)
     end
 end

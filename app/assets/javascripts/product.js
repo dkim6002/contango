@@ -39,20 +39,30 @@ $( document ).ready(function() {
 				var regPrice = data.regularPrice;
 				var url = data.url;
 				var img_url = data.mediumImage;
+				$.ajax({
+					url: '/wishlists/:wishlist_id/products',
+					dataType: 'json',
+					method: 'POST',
+					data: { product: {name: name, asin: asin, description: description, price: price, regPrice: regPrice, url: url, img_url: img_url}},
+					success: function(){
+						console.log(this);
+					}
+				})
 				$('#product-list ul').append("<li><a class='expand'><div class='right-arrow'>+</div><div class='img_url'><img src="+img_url+"></div><div class='large-5 columns'><h3>"+name+"</h3></div><div class='large-2 columns'><span>"+price+"</span></div><div class='large-2 columns'></div></a><div class='detail'><div><span>"+description+"</span></div><br/><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></div></div></li>");
-				productSave(name, asin, description, price, regPrice, url, img_url);
+				// productAppend(name, asin, description, price, regPrice, url, img_url);
 			}
 		})
 	}
 
-	function productSave(name, asin, description, price, regPrice, url, img_url){
+	function productAppend(name, asin, description, price, regPrice, url, img_url){
+		console.log(this);
 		$.ajax({
-			url: '/products',
+			url: '/wishlists/:wishlist_id/products',
 			dataType: 'json',
-			method: 'POST',
+			method: 'GET',
 			data: { product: {name: name, asin: asin, description: description, price: price, regPrice: regPrice, url: url, img_url: img_url}},
 			success: function(){
-				console.log('saved!');
+				console.log(this);
 			}
 		})
 	}

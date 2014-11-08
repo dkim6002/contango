@@ -3,11 +3,8 @@ class ProductsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @products = Product.all
-    respond_to do |format|
-      format.html
-      format.json {render json: @products}
-    end
+    @wishlists = Wishlist.where(user_id: current_user.id)
+
   end
 
   
@@ -22,7 +19,10 @@ class ProductsController < ApplicationController
 
   def create
     @product = Product.new(product_params)
+    
     if @product.save
+      @wishlist = Wishlist.new(user_id: current_user.id, product_id: @product.id)
+      @wishlist.save
       respond_to do |format|
       format.html {redirect_to product_path}
       format.json {render json: @products}
@@ -44,7 +44,7 @@ class ProductsController < ApplicationController
     @product.destroy
     if @product.destroy
       respond_to do |format|
-      format.html {redirect_to products_path}
+      format.html {redirect_to wishlist_products_path}
       format.json {render json: @products}
       end
     end
@@ -57,5 +57,9 @@ class ProductsController < ApplicationController
 
     def product_params
       params.require(:product).permit(:name, :asin, :price, :rate_of_change, :description, :regPrice, :url, :img_url)
+    end
+
+    def wishlist_params
+      params.require(:wishlist).permit(:user_id, :product_id)
     end
 end
