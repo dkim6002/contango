@@ -14,6 +14,7 @@ $( document ).ready(function() {
 		bestbuySearch(sku);
 		console.log(input);
 		console.log(sku);
+		this.reset();
 		// amazonQuery(search);
 	});
 
@@ -44,8 +45,8 @@ $( document ).ready(function() {
 					dataType: 'json',
 					method: 'POST',
 					data: { product: {name: name, asin: asin, description: description, price: price, regPrice: regPrice, url: url, img_url: img_url}},
-					success: function(){
-						console.log(this);
+					success: function(data){
+						console.log(data);
 					}
 				})
 				$('#product-list ul').append("<li><a class='expand'><div class='right-arrow'>+</div><div class='img_url'><img src="+img_url+"></div><div class='large-5 columns'><h3>"+name+"</h3></div><div class='large-2 columns'><span>"+price+"</span></div><div class='large-2 columns'></div></a><div class='detail'><div><span>"+description+"</span></div><br/><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></div></div></li>");
