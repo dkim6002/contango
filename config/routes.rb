@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
   
-  resources :wishlists do
-    resources :products
-  end
+  resources :wishlists
+  resources :products
 
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.

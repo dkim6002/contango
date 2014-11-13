@@ -18,13 +18,6 @@ $( document ).ready(function() {
 		// amazonQuery(search);
 	});
 
-	// function bbUrlSanitize(url){
-	// 	$('#search').remove();
-	// 	var skuIndex = url.indexOf('sku');
-	// 	var sku = url.slice(skuIndex + 6, skuIndex + 13)
-	// 	console.log(sku);
-	// 	bestbuySearch(sku);
-	// }
 
 	function bestbuySearch(query){
 		$.ajax({
@@ -41,7 +34,7 @@ $( document ).ready(function() {
 				var url = data.url;
 				var img_url = data.mediumImage;
 				$.ajax({
-					url: '/wishlists/:wishlist_id/products',
+					url: '/products',
 					dataType: 'json',
 					method: 'POST',
 					data: { product: {name: name, asin: asin, description: description, price: price, regPrice: regPrice, url: url, img_url: img_url}},
@@ -49,24 +42,12 @@ $( document ).ready(function() {
 						console.log(data);
 					}
 				})
-				$('#product-list ul').append("<li><a class='expand'><div class='right-arrow'>+</div><div class='img_url'><img src="+img_url+"></div><div class='large-5 columns'><h3>"+name+"</h3></div><div class='large-2 columns'><span>"+price+"</span></div><div class='large-2 columns'></div></a><div class='detail'><div><span>"+description+"</span></div><br/><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></div></div></li>");
+				$('#product-list ul').append("<li><a class='expand'><div class='right-arrow'>+</div><div class='img_url'><img src="+ img_url +"></div><div class='large-5 columns'><h3>"+ name +"</h3></div><div class='price-container'><div class='current-price columns'><span>"+ price +"</span></div><div class='reg-price columns'><span> -- </span></div></div></a><div class='detail'><div><span>"+ description +"</span></div><br/><div id='delete-item'><%= link_to 'Destroy', method: :delete, data: { confirm: 'Are you sure?' } %></div></div></li>");
 				// productAppend(name, asin, description, price, regPrice, url, img_url);
 			}
 		})
 	}
 
-	function productAppend(name, asin, description, price, regPrice, url, img_url){
-		console.log(this);
-		$.ajax({
-			url: '/wishlists/:wishlist_id/products',
-			dataType: 'json',
-			method: 'GET',
-			data: { product: {name: name, asin: asin, description: description, price: price, regPrice: regPrice, url: url, img_url: img_url}},
-			success: function(){
-				console.log(this);
-			}
-		})
-	}
 
 	// function amazonQuery(query){
 		
@@ -104,10 +85,9 @@ $( document ).ready(function() {
 
 // 	   return kSigning;
 // 	}
-// f45dee862fd03fe5ff267156857049d7a68fdc62a798a9984c2004d20d668a95
-// 	getSignatureKey('GET\nwebservices.amazon.com\n/onca/xml\nAWSAccessKeyId=AKIAJ5CS5S72UJPLAVDQ&AssociateTag=contango0c-20&Condition=All&IdType=ASIN&ItemId=B008URBC9I&Operation=ItemLookup&ResponseGroup=ItemAttributes&Service=AWSECommerceService&Timestamp=2014-10-29T13%3A53%3A58.000Z&Version=2011-08-01');
 
- $(".expand").on( "click", function() {
+
+  $(".expand").on( "click", function() {
  		console.log(this);
     $(this).next().slideToggle();
     $expand = $(this).find(">:first-child");

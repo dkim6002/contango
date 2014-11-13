@@ -37,6 +37,12 @@ class WishlistsController < ApplicationController
 
   def destroy
     @wishlist.destroy
+      if @wishlist.destroy
+        respond_to do |format|
+        format.html {redirect_to products_path}
+        format.json {render json: @products}
+      end
+    end
   end
 
   private

@@ -7,8 +7,6 @@ class ProductsController < ApplicationController
 
   end
 
-  
-
   def new
     @product = Product.new
     respond_with(@product)
@@ -19,7 +17,7 @@ class ProductsController < ApplicationController
 
   def create
     @product = Product.new(product_params)
-    
+    @product.rate_of_change = Product.calc_rate(@product.price, @product.regPrice)
     if @product.save
       @wishlist = Wishlist.new(user_id: current_user.id, product_id: @product.id)
       @wishlist.save
@@ -44,7 +42,7 @@ class ProductsController < ApplicationController
     @product.destroy
     if @product.destroy
       respond_to do |format|
-      format.html {redirect_to wishlist_products_path}
+      format.html {redirect_to products_path}
       format.json {render json: @products}
       end
     end

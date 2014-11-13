@@ -2,8 +2,9 @@
    
     <%= render 'form' %>
     
-    <h1>Product Wishlist</h1>
+    
     <div id="product-list">
+      <h1>Product Wishlist</h1>
       <ul>
         <% @wishlists.each do |item| %>
         <li>
@@ -11,22 +12,22 @@
           <div class="right-arrow">+</div>
           <div class="img_url"><img src="<%= item.product.img_url %>"></div>
           <div class="large-5 columns">
-          <h3><%= item.product.name %></h3>
+            <h3><%= item.product.name %></h3>
           </div>
           <div class="price-container">
-          <div class="current-price columns>"
-          <span>$<%= item.product.price %></span>
+          <div class="current-price columns">
+            <span>$<%= item.product.price %></span>
           </div>
           <div class="reg-price columns">
-          <span>$<%= item.product.regPrice %></span>
+            <span>%<%= item.product.rate_of_change %></span>
           </div>
           </div>
           </a>
           
           <div class="detail">
-            <div><span><%= item.product.description %></span></div><br/>
+            <div class="description"><span><%= item.product.description %></span></div><br/>
             <div id="delete-item">
-              <%= link_to 'Destroy', method: :delete, data: { confirm: 'Are you sure?' } %>
+              <%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %>
             </div>
           </div>
           
