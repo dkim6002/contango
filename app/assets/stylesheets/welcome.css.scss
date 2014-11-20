@@ -102,16 +102,7 @@ body{
     -webkit-transform: rotateX(-180deg);
 }
 
-/* For browsers with no 3d transfrom support */
-.no-csstransforms3d .letter-container h2 .tup .tback{
-    display: none;
-}
-.no-csstransforms3d .letter-container h2 a .twrap:hover .tup{
-    -moz-animation: moveBackUp 0.7s ease-in-out forwards;
-}
-.no-csstransforms3d .letter-container h2 a .twrap:hover .tdown{
-    -moz-animation: moveBackDown 0.7s ease-in-out forwards;
-}
+
 @-moz-keyframes moveBackUp {
     0%{ 
         -moz-transform: translateY(0%);

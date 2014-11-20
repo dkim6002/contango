@@ -33,21 +33,23 @@ $( document ).ready(function() {
 				var regPrice = data.regularPrice;
 				var url = data.url;
 				var img_url = data.mediumImage;
-				$.ajax({
-					url: '/products',
-					dataType: 'json',
-					method: 'POST',
-					data: { product: {name: name, asin: asin, description: description, price: price, regPrice: regPrice, url: url, img_url: img_url}},
-					success: function(data){
-						console.log(data);
-					}
-				})
-				$('#product-list ul').append("<li><a class='expand'><div class='right-arrow'>+</div><div class='img_url'><img src="+ img_url +"></div><div class='large-5 columns'><h3>"+ name +"</h3></div><div class='price-container'><div class='current-price columns'><span>"+ price +"</span></div><div class='reg-price columns'><span> -- </span></div></div></a><div class='detail'><div><span>"+ description +"</span></div><br/><div id='delete-item'><%= link_to 'Destroy', method: :delete, data: { confirm: 'Are you sure?' } %></div></div></li>");
-				// productAppend(name, asin, description, price, regPrice, url, img_url);
+				itemSave(name, asin, description, price, regPrice, url, img_url);
 			}
 		})
 	}
 
+	function itemSave(name, asin, description, price, regPrice, url, img_url){
+		$.ajax({
+			url: '/products',
+			dataType: 'json',
+			method: 'POST',
+			data: { product: {name: name, asin: asin, description: description, price: price, regPrice: regPrice, url: url, img_url: img_url}},
+			success: function(data){
+				console.log(data);
+			}
+		})
+		$('#product-list ul').append("<li><a class='expand'><div class='right-arrow'>+</div><div class='img_url'><img src="+ img_url +"></div><div class='large-5 columns'><h3>"+ name +"</h3></div><div class='price-container'><div class='current-price columns'><span>"+ price +"</span></div><div class='reg-price columns'><span> -- </span></div></div></a><div class='detail'><div><span>"+ description +"</span></div><br/><div id='delete-item'><%= link_to 'Destroy', method: :delete, data: { confirm: 'Are you sure?' } %></div></div></li>");
+	}
 
 	// function amazonQuery(query){
 		

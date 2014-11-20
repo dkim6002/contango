@@ -3,8 +3,12 @@ class ProductsController < ApplicationController
   before_action :authenticate_user!
 
   def index
+    @products = Product.all
     @wishlists = Wishlist.where(user_id: current_user.id)
-
+    respond_to do |format|
+      format.html
+      format.json {render json: @products}
+    end
   end
 
   def new

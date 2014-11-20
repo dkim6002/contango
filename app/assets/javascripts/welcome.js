@@ -8,7 +8,7 @@ $(document).ready(function(){
 		var extensionPlugin 	= {
 			wrapper	: function() {
 				var $w	= this;
-				$w.children('span').each( function(i) {
+				$w.children('span').each( function() {
 					var $el	= $(this),
 						t 	= $el.text();
 					

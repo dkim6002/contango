@@ -23,7 +23,7 @@ class WishlistsController < ApplicationController
   end
 
   def create
-    @wishlist = Wishlist.new(wishlist_params)
+    @wishlist = Wishlist.new(user_id: current_user.id, product_id: @product.id)
     @wishlist.save
     respond_to do |format|
       format.html
