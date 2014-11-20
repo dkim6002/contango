@@ -1,0 +1,397 @@
+/* line 1, /Users/DK/dev/wdi/contango/app/assets/stylesheets/products.css.scss */
+#product-list {
+  padding-top: 20%;
+}
+
+/* line 5, /Users/DK/dev/wdi/contango/app/assets/stylesheets/products.css.scss */
+#product-list ul {
+  padding: 0;
+  margin: 20px 0;
+  font-family: Arial, sans serif;
+  color: #555;
+}
+
+/* line 12, /Users/DK/dev/wdi/contango/app/assets/stylesheets/products.css.scss */
+#product-list ul > li {
+  list-style: none;
+  border-top: 1px solid #ddd;
+  display: block;
+  padding: 15px;
+  overflow: hidden;
+}
+
+/* line 20, /Users/DK/dev/wdi/contango/app/assets/stylesheets/products.css.scss */
+#product-list ul:last-child {
+  border-bottom: 1px solid #ddd;
+}
+
+/* line 24, /Users/DK/dev/wdi/contango/app/assets/stylesheets/products.css.scss */
+#product-list ul > li:hover {
+  background: #efefef;
+}
+
+/* line 28, /Users/DK/dev/wdi/contango/app/assets/stylesheets/products.css.scss */
+.expand {
+  display: block;
+  text-decoration: none;
+  color: #555;
+  cursor: pointer;
+}
+
+/* line 35, /Users/DK/dev/wdi/contango/app/assets/stylesheets/products.css.scss */
+h3 {
+  padding: 0;
+  margin: 5% 0% 5% 5%;
+  font-size: 18px;
+  display: inline-block;
+}
+
+/* line 42, /Users/DK/dev/wdi/contango/app/assets/stylesheets/products.css.scss */
+.detail {
+  margin: 20px 0 0 0;
+  display: none;
+  line-height: 22px;
+}
+
+/* line 48, /Users/DK/dev/wdi/contango/app/assets/stylesheets/products.css.scss */
+.right-arrow {
+  width: 10px;
+  height: 10px;
+  float: left;
+  font-weight: bold;
+  font-size: 20px;
+  margin-right: 2%;
+  padding-top: 2.3em;
+}
+
+/* line 58, /Users/DK/dev/wdi/contango/app/assets/stylesheets/products.css.scss */
+.icon {
+  height: 50px;
+  width: 50px;
+  float: left;
+  margin: 0 15px 0 0;
+}
+
+/* line 64, /Users/DK/dev/wdi/contango/app/assets/stylesheets/products.css.scss */
+.img_url {
+  display: inline-block;
+  margin-top: 1%;
+}
+
+/* line 68, /Users/DK/dev/wdi/contango/app/assets/stylesheets/products.css.scss */
+.price-container {
+  display: inline-block;
+  transform: translateY(-50%);
+  width: 30%;
+  float: right;
+  margin: 4% 0% 0% 0%;
+}
+
+/* line 75, /Users/DK/dev/wdi/contango/app/assets/stylesheets/products.css.scss */
+.large-5 {
+  display: inline-block;
+  align-items: center;
+  overflow: auto;
+  width: 36%;
+  padding-left: 20%;
+}
+
+/* line 83, /Users/DK/dev/wdi/contango/app/assets/stylesheets/products.css.scss */
+h1 {
+  text-align: center;
+}
+
+/* line 87, /Users/DK/dev/wdi/contango/app/assets/stylesheets/products.css.scss */
+#search {
+  position: absolute;
+  padding-top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* line 94, /Users/DK/dev/wdi/contango/app/assets/stylesheets/products.css.scss */
+input[type=search] {
+  font-size: 16px;
+}
+
+/* line 98, /Users/DK/dev/wdi/contango/app/assets/stylesheets/products.css.scss */
+.current-price {
+  display: inline-block;
+  margin: 0 auto;
+  padding-left: 40%;
+}
+
+/* line 104, /Users/DK/dev/wdi/contango/app/assets/stylesheets/products.css.scss */
+.reg-price {
+  display: inline-block;
+  float: right;
+  padding-right: 10%;
+}
+
+/* line 110, /Users/DK/dev/wdi/contango/app/assets/stylesheets/products.css.scss */
+.description {
+  width: 60%;
+  margin-left: 22%;
+}
+/* line 1, /Users/DK/dev/wdi/contango/app/assets/stylesheets/scaffolds.css.scss */
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 9, /Users/DK/dev/wdi/contango/app/assets/stylesheets/scaffolds.css.scss */
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 15, /Users/DK/dev/wdi/contango/app/assets/stylesheets/scaffolds.css.scss */
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+/* line 21, /Users/DK/dev/wdi/contango/app/assets/stylesheets/scaffolds.css.scss */
+a {
+  color: #000;
+}
+/* line 23, /Users/DK/dev/wdi/contango/app/assets/stylesheets/scaffolds.css.scss */
+a:visited {
+  color: #666;
+}
+/* line 26, /Users/DK/dev/wdi/contango/app/assets/stylesheets/scaffolds.css.scss */
+a:hover {
+  color: #555;
+}
+
+/* line 33, /Users/DK/dev/wdi/contango/app/assets/stylesheets/scaffolds.css.scss */
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+/* line 38, /Users/DK/dev/wdi/contango/app/assets/stylesheets/scaffolds.css.scss */
+#notice {
+  color: green;
+}
+
+/* line 42, /Users/DK/dev/wdi/contango/app/assets/stylesheets/scaffolds.css.scss */
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+/* line 48, /Users/DK/dev/wdi/contango/app/assets/stylesheets/scaffolds.css.scss */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+/* line 55, /Users/DK/dev/wdi/contango/app/assets/stylesheets/scaffolds.css.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: #c00;
+  color: #fff;
+}
+/* line 65, /Users/DK/dev/wdi/contango/app/assets/stylesheets/scaffolds.css.scss */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+/* line 1, /Users/DK/dev/wdi/contango/app/assets/stylesheets/welcome.css.scss */
+body {
+  font-family: 'Prociono', Georgia, serif;
+}
+
+/* line 6, /Users/DK/dev/wdi/contango/app/assets/stylesheets/welcome.css.scss */
+#banner {
+  color: #f0f0f0;
+}
+
+/* line 9, /Users/DK/dev/wdi/contango/app/assets/stylesheets/welcome.css.scss */
+.letter-container {
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+  border-top: 1px dashed rgba(255, 255, 255, 0.1);
+  margin: 20px;
+  padding: 40px 10px;
+  font-family: 'Aldrich', Arial, sans-serif;
+}
+
+/* line 16, /Users/DK/dev/wdi/contango/app/assets/stylesheets/welcome.css.scss */
+.letter-container h2 {
+  text-align: center;
+}
+
+/* line 19, /Users/DK/dev/wdi/contango/app/assets/stylesheets/welcome.css.scss */
+.letter-container h2 a {
+  color: #fff;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+/* line 24, /Users/DK/dev/wdi/contango/app/assets/stylesheets/welcome.css.scss */
+.letter-container h2 .twrap {
+  position: relative;
+  display: inline-block;
+  width: 100px;
+  height: 120px;
+  line-height: 120px;
+  font-size: 120px;
+  border: 15px solid rgba(0, 0, 0, 0.5);
+  -webkit-perspective: 400;
+  -webkit-box-shadow: 1px 1px 4px #000;
+  -moz-box-shadow: 1px 1px 4px #000;
+  box-shadow: 1px 1px 4px #000;
+}
+
+/* line 37, /Users/DK/dev/wdi/contango/app/assets/stylesheets/welcome.css.scss */
+.letter-container h2 .tbg {
+  background: #121212;
+  position: absolute;
+  color: #f2c200;
+  width: 100%;
+  height: 100%;
+  -moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.9);
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.9);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.9);
+}
+
+/* line 47, /Users/DK/dev/wdi/contango/app/assets/stylesheets/welcome.css.scss */
+.letter-container h2 .tdown {
+  height: 50%;
+  top: 50%;
+  width: 100%;
+  position: absolute;
+  overflow: hidden;
+  z-index: 1;
+  background: #151515;
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.9);
+  -moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.9);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.9);
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+/* line 65, /Users/DK/dev/wdi/contango/app/assets/stylesheets/welcome.css.scss */
+.letter-container h2 .tdown span,
+.letter-container h2 .tup .tback span {
+  display: block;
+  margin-top: -60px;
+}
+
+/* line 69, /Users/DK/dev/wdi/contango/app/assets/stylesheets/welcome.css.scss */
+.letter-container h2 .tup {
+  height: 50%;
+  width: 100%;
+  position: absolute;
+  z-index: 10;
+  -webkit-transform-origin: 50% 100%;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.9);
+  -moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.9);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.9);
+}
+
+/* line 85, /Users/DK/dev/wdi/contango/app/assets/stylesheets/welcome.css.scss */
+.letter-container h2 .tup .tfront,
+.letter-container h2 .tup .tback {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  background: #151515;
+}
+
+/* line 94, /Users/DK/dev/wdi/contango/app/assets/stylesheets/welcome.css.scss */
+.letter-container h2 .tup .tback {
+  background: #121212;
+  color: #f2c200;
+}
+
+/* line 98, /Users/DK/dev/wdi/contango/app/assets/stylesheets/welcome.css.scss */
+.csstransforms3d .letter-container h2 .tup .tback {
+  -webkit-transform: rotateX(-180deg);
+}
+
+/* line 101, /Users/DK/dev/wdi/contango/app/assets/stylesheets/welcome.css.scss */
+.csstransforms3d .letter-container h2 a .twrap:hover .tup {
+  -webkit-transform: rotateX(-180deg);
+}
+
+@-moz-keyframes moveBackUp {
+  /* line 107, /Users/DK/dev/wdi/contango/app/assets/stylesheets/welcome.css.scss */
+  0% {
+    -moz-transform: translateY(0%);
+  }
+
+  /* line 110, /Users/DK/dev/wdi/contango/app/assets/stylesheets/welcome.css.scss */
+  50% {
+    -moz-transform: translateY(-120%);
+    z-index: -1;
+  }
+
+  /* line 114, /Users/DK/dev/wdi/contango/app/assets/stylesheets/welcome.css.scss */
+  100% {
+    -moz-transform: translateY(0%);
+    z-index: -1;
+  }
+}
+
+@-moz-keyframes moveBackDown {
+  /* line 120, /Users/DK/dev/wdi/contango/app/assets/stylesheets/welcome.css.scss */
+  0% {
+    -moz-transform: translateY(0%);
+  }
+
+  /* line 123, /Users/DK/dev/wdi/contango/app/assets/stylesheets/welcome.css.scss */
+  50% {
+    -moz-transform: translateY(120%);
+    z-index: -1;
+  }
+
+  /* line 127, /Users/DK/dev/wdi/contango/app/assets/stylesheets/welcome.css.scss */
+  100% {
+    -moz-transform: translateY(0%);
+    z-index: -1;
+  }
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
+
+
