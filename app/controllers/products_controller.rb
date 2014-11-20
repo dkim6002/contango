@@ -5,10 +5,10 @@ class ProductsController < ApplicationController
   def index
     @products = Product.all
     @wishlists = Wishlist.where(user_id: current_user.id)
-    respond_to do |format|
-      format.html
-      format.json {render json: @products}
-    end
+    # respond_to do |format|
+    #   format.html
+    #   format.json {render json: @products}
+    # end
   end
 
   def new
