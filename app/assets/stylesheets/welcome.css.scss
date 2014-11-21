@@ -1,7 +1,14 @@
-body{
+body {
+    background: url(bg-img.jpg) no-repeat center center fixed; 
+    background-size: cover;
+}
+html{
     
     font-family: 'Prociono', Georgia, serif;
-    
+    min-height: 100%;
+    width: 100%;
+    height: auto;
+    min-width: 1024px;
 }
 #banner{
     color: #f0f0f0;

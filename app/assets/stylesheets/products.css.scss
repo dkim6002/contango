@@ -15,6 +15,7 @@
   display: block;
   padding: 15px;
   overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.75);
 }
 
 #product-list ul:last-child {
@@ -22,7 +23,7 @@
 }
 
 #product-list ul > li:hover {
-  background: #efefef;
+  background: rgba(255, 255, 255, 0.90);
 }
 
 .expand {
